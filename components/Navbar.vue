@@ -27,7 +27,7 @@ const navbarMenu = computed(() => {
 
 <template>
   <header class="sticky top-0 left-0 bg-gray-300 dark:bg-dark-600">
-    <nav class="container py-3 flex justify-end items-center">
+    <nav class="container mx-auto py-3 flex justify-end items-center">
       <ul class="flex items-center gap-2">
         <li v-for="menuLink in navbarMenu">
           <nuxt-link

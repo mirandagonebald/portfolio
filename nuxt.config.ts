@@ -7,10 +7,9 @@ export default defineNuxtConfig({
         accessToken: process.env.STORYBLOK_TOKEN,
       },
     ],
-    "@unocss/nuxt",
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
-    "nuxt-purgecss",
+    "@unocss/nuxt",
   ],
   css: ["@unocss/reset/tailwind.css"],
   experimental: {

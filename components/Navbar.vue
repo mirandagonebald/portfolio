@@ -26,19 +26,24 @@ const navbarMenu = computed(() => {
 </script>
 
 <template>
-  <nav class="container py-3 flex justify-end items-center">
-    <ul class="flex items-center gap-2">
-      <li v-for="menuLink in navbarMenu">
-        <nuxt-link :to="menuLink.link" class="text-cyan-600 dark:text-cyan-400">
-          {{ menuLink.text.toLowerCase() }}
-        </nuxt-link>
-      </li>
+  <header class="sticky top-0 left-0 bg-gray-300 dark:bg-dark-600">
+    <nav class="container py-3 flex justify-end items-center">
+      <ul class="flex items-center gap-2">
+        <li v-for="menuLink in navbarMenu">
+          <nuxt-link
+            :to="menuLink.link"
+            class="text-cyan-600 dark:text-cyan-400"
+          >
+            {{ menuLink.text.toLowerCase() }}
+          </nuxt-link>
+        </li>
 
-      <button
-        @click="toggleDarkMode"
-        type="button"
-        class="outline-none i-carbon-moon dark:i-carbon-sun"
-      />
-    </ul>
-  </nav>
+        <button
+          @click="toggleDarkMode"
+          type="button"
+          class="outline-none i-carbon-moon dark:i-carbon-sun"
+        />
+      </ul>
+    </nav>
+  </header>
 </template>

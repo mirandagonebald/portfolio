@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
     "@unocss/nuxt",
+    "@nuxtjs/partytown",
   ],
   css: ["@unocss/reset/tailwind.css"],
   experimental: {

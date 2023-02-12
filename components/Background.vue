@@ -12,7 +12,7 @@
 
 <style scoped lang="scss">
 #background {
-  background: transparent url("/noise_4.png") repeat 0 0;
+  background: transparent url("/noise.png") repeat 0 0;
   animation: static 0.2s infinite;
 }
 

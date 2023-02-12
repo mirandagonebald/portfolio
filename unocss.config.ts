@@ -23,9 +23,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       provider: "bunny",
-      fonts: {
-        londrina: "Londrina Outline",
-      },
+      fonts: { aldrich: "Aldrich" },
     }),
     presetHeroPatterns(),
   ],

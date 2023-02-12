@@ -10,7 +10,6 @@ import {
 import { presetHeroPatterns } from "@julr/unocss-preset-heropatterns";
 
 export default defineConfig({
-  shortcuts: {},
   presets: [
     presetWind(),
     presetIcons({

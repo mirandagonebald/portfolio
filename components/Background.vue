@@ -1,26 +1,22 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="overflow-hidden fixed inset-8 z-1 b-1 b-black dark:b-white">
-    <div id="background" class="dark:opacity-90"></div>
+  <div
+    class="overflow-hidden fixed inset-8 z-1 b-1 b-dark-800 dark:b-light-800"
+  >
+    <div id="background" class="absolute inset-[-50%] w-[200%] h-[200vh]" />
+
+    <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
 #background {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent url("/noise.png") repeat 0 0;
-  visibility: visible;
-  animation: bg-animation 0.2s infinite;
+  background: transparent url("/noise_4.png") repeat 0 0;
+  animation: static 0.2s infinite;
 }
 
-@keyframes bg-animation {
+@keyframes static {
   0% {
     transform: translate(0, 0);
   }

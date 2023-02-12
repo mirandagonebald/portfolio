@@ -6,7 +6,7 @@
   >
     <div
       id="background"
-      class="bg-transparent bg-repeat bg-[left_top_0_0] absolute inset-[-50%] w-[200%] h-[200vh] animate-[static_.2s_infinite]"
+      class="bg-transparent bg-repeat bg-[left_top_0_0] absolute inset-[-50%] w-[200%] h-[200vh]"
     />
 
     <slot />
@@ -16,6 +16,7 @@
 <style scoped lang="scss">
 #background {
   background-image: url("https://a.storyblok.com/f/197316/400x400/2df0ee6f94/noise.webp");
+  animation: static 0.2s infinite;
 }
 
 @keyframes static {

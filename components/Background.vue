@@ -12,7 +12,10 @@
 
 <style scoped lang="scss">
 #background {
-  background: transparent url("/noise.webp") repeat 0 0;
+  background-color: transparent;
+  background-image: url("https://a.storyblok.com/f/197316/400x400/2df0ee6f94/noise.webp");
+  background-repeat: repeat;
+  background-position: 0 0;
   animation: static 0.2s infinite;
 }
 

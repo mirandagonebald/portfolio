@@ -9,8 +9,8 @@ const { data } = await storyblokApi.get("cdn/stories/config", {
 
 const navbarMenu = computed(() => {
   const menu = data.story.content.navbar_menu.map((menuLink: any) => {
-    const link = `/${menuLink.link.cached_url}${
-      menuLink.link.cached_url.slice(-1) !== "/" ? "/" : ""
+    const link = `${menuLink.link.story.url === "/" ? "" : "/"}${
+      menuLink.link.story.url
     }`;
 
     return {
@@ -27,7 +27,10 @@ const navbarMenu = computed(() => {
 <template>
   <nav class="absolute right-8 top-4">
     <ul class="flex flex-col items-end">
-      <li v-for="menuLink in navbarMenu" class="text-right">
+      <li
+        v-for="menuLink in navbarMenu"
+        class="text-right h-[24px] flex items-center"
+      >
         <nuxt-link :to="menuLink.link">
           <div
             v-if="route.path === menuLink.link"

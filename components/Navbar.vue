@@ -1,10 +1,6 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
 const storyblokApi = useStoryblokApi();
-
-const toggleDarkMode = () => {
-  colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-};
+const route = useRoute();
 
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: "draft",
@@ -20,16 +16,8 @@ const navbarMenu = computed(() => {
     return {
       type: "link",
       link,
-      value: menuLink.link.story.name,
+      text: menuLink.link.story.name,
     };
-  });
-
-  const middleIndex = Math.ceil(menu.length / 2);
-
-  menu.splice(middleIndex, 0, {
-    type: "image",
-    link: "/",
-    value: "/logo.svg",
   });
 
   return menu;
@@ -37,32 +25,18 @@ const navbarMenu = computed(() => {
 </script>
 
 <template>
-  <header class="bg-gray-300 dark:bg-dark-600">
-    <nav class="container mx-auto py-8 flex justify-center items-center">
-      <ul class="flex items-center gap-2">
-        <li v-for="menuLink in navbarMenu">
-          <nuxt-link
-            v-if="menuLink.type === 'link'"
-            :to="menuLink.link"
-            class="text-cyan-600 dark:text-cyan-400"
-          >
-            {{ menuLink.value.toLowerCase() }}
-          </nuxt-link>
-
-          <img
-            class="mx-6"
-            v-else-if="menuLink.type === 'image'"
-            :src="menuLink.value"
-            alt=""
+  <nav class="absolute right-8 top-4">
+    <ul class="flex flex-col items-end">
+      <li v-for="menuLink in navbarMenu" class="text-right">
+        <nuxt-link :to="menuLink.link">
+          <div
+            v-if="route.path === menuLink.link"
+            class="i-mdi-square-medium mr-[-4px]"
           />
-        </li>
 
-        <button
-          @click="toggleDarkMode"
-          type="button"
-          class="outline-none i-carbon-moon dark:i-carbon-sun"
-        />
-      </ul>
-    </nav>
-  </header>
+          <span v-else>{{ menuLink.text }}</span>
+        </nuxt-link>
+      </li>
+    </ul>
+  </nav>
 </template>

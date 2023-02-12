@@ -1,5 +1,5 @@
 <template>
-  <main class="z-2 absolute p-4">
+  <main class="z-2 absolute px-8 py-4">
     <slot />
   </main>
 </template>

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@nuxtjs/partytown",
   ],
-  css: ["@unocss/reset/tailwind.css"],
+  css: ["@unocss/reset/tailwind.css", "@/assets/styles/main.scss"],
   experimental: {
     reactivityTransform: true,
     inlineSSRStyles: false,

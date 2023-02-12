@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@iconify-json/carbon': ^1.1.14
+  '@iconify-json/mdi': ^1.1.46
   '@julr/unocss-preset-heropatterns': ^0.0.2
   '@nuxtjs/color-mode': ^3.2.0
   '@nuxtjs/partytown': ^1.3.0
@@ -15,6 +16,7 @@ specifiers:
 
 devDependencies:
   '@iconify-json/carbon': 1.1.14
+  '@iconify-json/mdi': 1.1.46
   '@julr/unocss-preset-heropatterns': 0.0.2
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/partytown': 1.3.0
@@ -759,6 +761,12 @@ packages:
 
   /@iconify-json/carbon/1.1.14:
     resolution: {integrity: sha512-Md5Vh3x2ALI5shFHlqZQBpEBk0coZf8bcFqzZBqf3bZuUTDg78y9vkwhQ+0PF1Q3wmZIfwkSJU9Pf6V228pXxw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/mdi/1.1.46:
+    resolution: {integrity: sha512-1BGXzKpVRAgcDuoLGLvignvDXePiaGITbvQpfCi/C2FlhP9r9n0kPIyWVfjRYUYz4YzLnuDKr9YM0jIv9aus9A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

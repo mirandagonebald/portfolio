@@ -1,7 +1,7 @@
 <template>
   <div class="fixed inset-0 z-0">
     <background>
-      <navbar />
+      <navigation />
 
       <nuxt-layout>
         <nuxt-page />

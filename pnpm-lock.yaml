@@ -13,6 +13,10 @@ specifiers:
   nuxt: ^3.1.2
   sass: ^1.58.0
   typescript: ^4.9.5
+  vue-powerglitch: ^1.0.0
+
+dependencies:
+  vue-powerglitch: 1.0.0
 
 devDependencies:
   '@iconify-json/carbon': 1.1.14
@@ -4309,6 +4313,10 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /powerglitch/2.3.2:
+    resolution: {integrity: sha512-nRKMttDRu0aOeu5/rUm0CFvwuaE3b7Klujjn0AIgoLUim0E2+4YpXZ76+2t9cJERQuFZ+7D36ywG7GLtRUSyMQ==}
+    dev: false
+
   /pretty-bytes/6.1.0:
     resolution: {integrity: sha512-Rk753HI8f4uivXi4ZCIYdhmG1V+WKzvRMg/X+M42a6t7D07RcmopXJMDNk6N++7Bl75URRGsb40ruvg7Hcp2wQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -5236,6 +5244,14 @@ packages:
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
+
+  /vue-powerglitch/1.0.0:
+    resolution: {integrity: sha512-archjrInM46s2zMes6ZB9ob5799adn8oXTU0KHBp/plst+za1gdS/qk5RynfJjtFyCHJ02BT2v1Pl89ILfZP+Q==}
+    peerDependencies:
+      vue: '>= 3.0.0'
+    dependencies:
+      powerglitch: 2.3.2
+    dev: false
 
   /vue-router/4.1.6_vue@3.2.47:
     resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}

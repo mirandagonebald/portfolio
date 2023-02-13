@@ -31,7 +31,7 @@ const menu = computed(() => {
               :options="{ playMode: 'click', timing: { duration: 300 } }"
               :inline="true"
             >
-              <div class="capitalize">{{ link.text }}</div>
+              <div class="uppercase">{{ link.text }}</div>
             </glitched-element>
 
             <div v-else class="i-mdi-square-medium mr-[-4px]" />

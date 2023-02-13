@@ -34,10 +34,7 @@ const menu = computed(() => {
               <div class="capitalize">{{ link.text }}</div>
             </glitched-element>
 
-            <div
-              v-else-if="link.path === route.path"
-              class="i-mdi-square-medium mr-[-4px]"
-            />
+            <div v-else class="i-mdi-square-medium mr-[-4px]" />
           </transition>
         </nuxt-link>
       </li>

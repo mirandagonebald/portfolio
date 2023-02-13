@@ -31,7 +31,7 @@ const menu = computed(() => {
               :options="{ playMode: 'click', timing: { duration: 300 } }"
               :inline="true"
             >
-              <div>{{ link.text }}</div>
+              <div clas="capitalize">{{ link.text }}</div>
             </glitched-element>
 
             <div

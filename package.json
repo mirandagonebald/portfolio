@@ -15,14 +15,15 @@
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/partytown": "^1.3.0",
     "@storyblok/nuxt": "^5.1.0",
+    "@types/howler": "^2.2.7",
     "@types/node": "^18.13.0",
     "@unocss/nuxt": "^0.49.4",
     "@vueuse/nuxt": "^9.12.0",
+    "howler": "^2.2.3",
     "nuxt": "^3.1.2",
+    "nuxt-icons": "^3.1.0",
     "sass": "^1.58.0",
-    "typescript": "^4.9.5"
-  },
-  "dependencies": {
+    "typescript": "^4.9.5",
     "vue-powerglitch": "^1.0.0"
   }
 }

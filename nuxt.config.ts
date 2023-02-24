@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@unocss/nuxt",
     "@nuxtjs/partytown",
+    "nuxt-icons",
   ],
   css: ["@unocss/reset/tailwind.css"],
   experimental: {

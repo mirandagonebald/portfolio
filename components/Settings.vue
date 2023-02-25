@@ -27,31 +27,47 @@ const sound = useLocalStorage("sound", true);
 
   <client-only>
     <div
-      class="z-1 cursor-pointer fixed right-10 bottom-10 text-white"
       @click="sound = !sound"
+      class="z-1 cursor-pointer fixed right-10 bottom-10 text-white"
     >
-      <transition name="rotate" mode="out-in">
-        <div v-if="sound" class="i-akar-icons-sound-on" />
+      <div
+        :class="{ active: sound }"
+        class="sound-icon on i-akar-icons-sound-on"
+      />
 
-        <div v-else class="i-akar-icons-sound-off" />
-      </transition>
+      <div
+        :class="{ active: !sound }"
+        class="sound-icon off i-akar-icons-sound-off"
+      />
     </div>
   </client-only>
 </template>
 
 <style scoped lang="scss">
-.rotate-enter-active,
-.rotate-leave-active {
-  transition: all 0.3s ease;
-}
+.sound-icon {
+  @apply absolute bottom-0 right-0;
+  transition: opacity 0.3s, transform 0.3s;
 
-.rotate-enter-from {
-  transform: rotate(0);
-  opacity: 0;
-}
+  &.on {
+    &:not(.active) {
+      transform: rotate(180deg);
+      opacity: 0;
+    }
 
-.rotate-leave-to {
-  transform: rotate(-45deg);
-  opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.off {
+    &:not(.active) {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }
 </style>

@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/akar-icons': ^1.1.13
   '@iconify-json/carbon': ^1.1.14
   '@iconify-json/mdi': ^1.1.46
   '@julr/unocss-preset-heropatterns': ^0.0.2
@@ -19,6 +20,7 @@ specifiers:
   vue-powerglitch: ^1.0.0
 
 devDependencies:
+  '@iconify-json/akar-icons': 1.1.13
   '@iconify-json/carbon': 1.1.14
   '@iconify-json/mdi': 1.1.46
   '@julr/unocss-preset-heropatterns': 0.0.2
@@ -766,6 +768,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify-json/akar-icons/1.1.13:
+    resolution: {integrity: sha512-PyQwbPEp52/Wik0b6IzfmjaJ8C6fD5fa0BgX6dNEL8oiSpkhoMTnI2adWu+EFcDoenrPMz64LJSnGRfFpLK8Og==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/carbon/1.1.14:
     resolution: {integrity: sha512-Md5Vh3x2ALI5shFHlqZQBpEBk0coZf8bcFqzZBqf3bZuUTDg78y9vkwhQ+0PF1Q3wmZIfwkSJU9Pf6V228pXxw==}

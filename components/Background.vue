@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div
     class="overflow-hidden fixed inset-8 z-1 b-1 b-dark-800 dark:b-light-800"

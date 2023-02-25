@@ -1,7 +1,10 @@
 <script setup lang="ts">
 const storyblokApi = useStoryblokApi();
 const route = useRoute();
-const sfx = useSfx("/sounds/gowlermusic_glitch.wav");
+const { playSound } = useSfx("/sounds/white_noise", {
+  volume: 0.7,
+  duration: 300,
+});
 
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: "draft",
@@ -19,18 +22,10 @@ const menu = computed(() => {
     };
   });
 });
-
-const playSound = () => {
-  sfx.play();
-
-  setTimeout(() => {
-    sfx.stop();
-  }, 300);
-};
 </script>
 
 <template>
-  <nav class="z-3 absolute right-8 top-8">
+  <nav class="z-3 absolute right-8 top-4">
     <ul class="flex flex-col items-end">
       <li
         v-for="link in menu"

@@ -8,7 +8,7 @@
       </nuxt-layout>
     </background>
 
-    <color-toggle />
+    <settings />
   </div>
 </template>
 
